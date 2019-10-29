@@ -1,0 +1,88 @@
+@import url(https://fonts.google.com/specimen/Fira+Code?selection.family=Fira+Code);
+html {
+  background: #0a192f;
+  overflow-y: scroll; 
+}
+
+body {
+  font: .875em/1.6 'FiraCode', monospace;
+  color: #64ffda;
+  font-weight: 400;
+  max-width: 28em;
+  padding: 1em;
+  margin: 0% 0; 
+}
+::selection{
+  background: #CCD6F6
+}
+::-webkit-selection{
+  background: #CCD6F6
+}
+::-moz-selection{
+  background: #CCD6F6
+}
+a{
+  color: #999999;
+}
+a:hover,a:focus{
+  background: #999999;
+  color:#999999;
+}
+h2{
+  font-size: 1em;
+  font-weight: 400;
+}
+p{
+  margin-bottom:2em;
+}
+abbr{
+  cursor: help;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+li{
+  margin:1em 0 0;
+}
+span{
+  display: block;
+  color:#999999;
+  line-height:1;
+}
+
+kbd{
+  font-family: 'FiraCode', monospace;
+  border:1px solid #999999;
+  text-transform: uppercase;
+  padding:0 .2em;
+}
+/*CMD Line*/
+input[type="text"]{
+  max-width: 10em;
+  border: none;
+  font-family: inherit;
+  background: #0a192f;
+  color: #999999;
+  padding:0 .5em;
+}
+input[type="text"]:focus{
+  background: #0a192f;
+  color: #999999;
+  outline:none;
+}
+.command{
+  display: block;
+  max-width: 20em;
+  color: #999999;
+  font-weight: 700;
+  margin: 2em 0;
+}
+
+
+section{
+  display: none;
+}
+.open{
+  display: block;
+}
