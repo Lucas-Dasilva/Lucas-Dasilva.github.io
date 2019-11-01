@@ -21,44 +21,45 @@ body {
 ::-moz-selection{
   background: #CCD6F6
 }
-a{
-  color: #999999;
-}
-a:hover,a:focus{
-  background: #999999;
-  color:#999999;
-}
 h2{
   font-size: 1em;
   font-weight: 400;
 }
+
 p{
   margin-bottom:2em;
-}
-abbr{
-  cursor: help;
-}
-ul{
-  list-style: none;
-  padding: 0;
-}
-li{
-  margin:1em 0 0;
 }
 span{
   display: block;
   color:#999999;
   line-height:1;
 }
-
-kbd{
-  font-family: 'FiraCode', monospace;
-  border:1px solid #999999;
-  text-transform: uppercase;
-  padding:0 .2em;
+/*Skip Text*/
+ /* #wrapper { 
+	position: absolute; 
+	left: 8.5px; 
+	right: 10px; 
+	top: 0px; 
+	bottom: 10px; 
+}  */
+/* input[id = "whichkey"]{
+  max-width: 15em;
+  border: none;
+  font-family: inherit;
+  background: #0a192f;
+  color: #999999;
+  padding:0 .5em;
 }
+input[id = "whichkey"]:focus{
+  max-width: 15em;
+  border: none;
+  font-family: inherit;
+  background: #0a192f;
+  color: #999999;
+  padding:0 .5em;
+} */
 /*CMD Line*/
-input[type="text"]{
+input[id = "cmdInput"]{
   max-width: 10em;
   border: none;
   font-family: inherit;
@@ -66,7 +67,7 @@ input[type="text"]{
   color: #999999;
   padding:0 .5em;
 }
-input[type="text"]:focus{
+input[id = "cmdInput"]:focus{
   background: #0a192f;
   color: #999999;
   outline:none;
@@ -78,7 +79,26 @@ input[type="text"]:focus{
   font-weight: 700;
   margin: 2em 0;
 }
+/*Welcome Animation*/
+h1{
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: -0.5;
 
+}
+.welcome{
+  color: #0a192f;
+  font: inherit;
+  font-size: 1.2em;
+
+}
+.welcomeFade{
+  color:#64ffda;
+  position: fixed;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
 
 section{
   display: none;
