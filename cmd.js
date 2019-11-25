@@ -2,6 +2,7 @@
 jQuery animation
 */
 
+//Function Credit: Paulo Nunes (http://syndicatefx.com)
 (function(e){"use strict";e.fn.textTyper=function(t){
 	var n={typingClass:"typing",beforeAnimation:function(){},
 	afterAnimation:function(){},speed:10,nextLineDelay:400,startsFrom:0,repeatAnimation:false,repeatDelay:4e3,repeatTimes:1,cursorHtml:'<span class="cursor">|</span>'}
@@ -32,22 +33,17 @@ jQuery animation
 	r.speed)};t.init()});return this}
 })(jQuery)
 
-// $('input[id = "whichkey"]').focus();	
-// $('input[id = "whichkey"]').on("keydown", function( event ) {
-// 	if(event.which == 13){
-
-// 	window.location.replace("home.html");
-// 	}
-// });
-
-
-
-// Let's do it!!
+//Skip to home if enter is pressed, but if not then focus on cmd input
 $(document).ready(function() {
-	$('.command').hide();
-	//$('.welcome').hide();
+	$('.command').hide();	
+	$('#skipInput').focus();
+  $('#skipInput').on("keydown", function( event ) {
+	if(event.which == 13){
+		window.location.replace("home.html");
+	}
+  });
+
 	$('#cmdInput').focus();
-	
   $('#home').addClass('open');
   $('#home').textTyper({
         speed:7,
@@ -62,18 +58,23 @@ $(document).ready(function() {
 	$('#cmdInput').keyup(function(key){
 		var name = $('#cmdInput').val();
 		if(key.which == 13){// ENTER key pressed
+			$('#skipInput').addClass("animated fadeOut slow");
 			$('.command').addClass("animated fadeOut slow");
 			$('#home').addClass("animated fadeOut slow");
-
 			$('.welcome').append(name);
+			
 			$('.welcome').addClass("welcomeFade");
 			$('.welcome').addClass("animated fadeIn slow delay-1s");
-			//$(document).ready(function(){window.location.replace("home.html")})}
-			
-		
+			//Wait until animation ends to redirect
+			setTimeout(function() {
+				
+				window.location.replace ("home.html")
+			}, 2300);		
 		}	
-	});// end keyup function
-
-	// End Command Input-----------------------------
-
+		//exports.name = name;
+	});
 });
+
+
+
+

@@ -12,6 +12,7 @@ body {
   padding: 1em;
   margin: 0% 0; 
 }
+
 ::selection{
   background: #CCD6F6
 }
@@ -35,14 +36,14 @@ span{
   line-height:1;
 }
 /*Skip Text*/
- /* #wrapper { 
+#wrapper { 
 	position: absolute; 
 	left: 8.5px; 
 	right: 10px; 
 	top: 0px; 
 	bottom: 10px; 
-}  */
-/* input[id = "whichkey"]{
+} 
+ input[id = "skipInput"]{
   max-width: 15em;
   border: none;
   font-family: inherit;
@@ -50,14 +51,16 @@ span{
   color: #999999;
   padding:0 .5em;
 }
-input[id = "whichkey"]:focus{
+input[id = "skipInput"]:focus{
   max-width: 15em;
   border: none;
   font-family: inherit;
   background: #0a192f;
   color: #999999;
   padding:0 .5em;
-} */
+}
+
+
 /*CMD Line*/
 input[id = "cmdInput"]{
   max-width: 10em;
