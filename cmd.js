@@ -36,13 +36,11 @@ jQuery animation
 //Skip to home if enter is pressed, but if not then focus on cmd input
 $(document).ready(function() {
 	$('.command').hide();	
-	$('#skipInput').focus();
-  $('#skipInput').on("keydown", function( event ) {
-	if(event.which == 13){
-		window.location.replace("home.html");
-	}
-  });
+	$('.welcome').hide();
+	$('#navWrapper').hide();
+	$('#body').hide();
 
+	$('#skipInput').focus();
 	$('#cmdInput').focus();
   $('#home').addClass('open');
   $('#home').textTyper({
@@ -51,8 +49,33 @@ $(document).ready(function() {
           $('.command').fadeIn();
           $('#cmdInput').focus();
           $('#cmdInput').val('');
-				}
+				}	
 	});
+	$('#skipInput').on("keydown", function( event ) {
+		if(event.which == 13){			
+			$('#skipInput').addClass("animated fadeOut slow");
+			$('.command').addClass("animated fadeOut slow");
+			$('#home').addClass("animated fadeOut slow");
+			$('.welcome').append(name);
+			$('.hello').append(" Stranger"+"!");
+
+			//New Page
+			$('.background').addClass("behind");
+			setTimeout(function() {
+				$('.welcome').fadeIn("slow");
+				
+			}, 250);		
+			//Wait until animation ends to redirect
+			setTimeout(function() {
+				$('.welcome').addClass("animated fadeOut");
+			}, 1750);		
+			setTimeout(function() {
+				$('#navWrapper').fadeIn();
+				$("#navWrapper").addClass("animated fadeInUp slow delay-1s");
+				$('#body').fadeIn();
+			
+			}, 2500);		
+		}});
 	
 	//Command input
 	$('#cmdInput').keyup(function(key){
@@ -62,16 +85,27 @@ $(document).ready(function() {
 			$('.command').addClass("animated fadeOut slow");
 			$('#home').addClass("animated fadeOut slow");
 			$('.welcome').append(name);
-			
-			$('.welcome').addClass("welcomeFade");
-			$('.welcome').addClass("animated fadeIn slow delay-1s");
+			$('.hello').append(" "+name+"!");
+
+			//New Page
+			$('.background').addClass("behind"); //Remove Backgorund
+			//Welcome Fade
+			setTimeout(function() {
+				$('.welcome').fadeIn("slow");
+			}, 750);		
 			//Wait until animation ends to redirect
 			setTimeout(function() {
-				
-				window.location.replace ("home.html")
-			}, 2300);		
+				$('.welcome').addClass("animated fadeOut");
+			}, 1750);		
+			setTimeout(function() {
+				$('#navWrapper').fadeIn();
+				$("#navWrapper").addClass("animated fadeInUp slow delay-1s");
+				$('#body').fadeIn();
+			
+			}, 2500);		
+		
 		}	
-		//exports.name = name;
+	
 	});
 });
 
