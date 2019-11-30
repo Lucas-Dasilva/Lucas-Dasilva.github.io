@@ -187,7 +187,7 @@ nav{
   position: absolute;
   color: rgb(100, 255, 218);
   font-size: 30px;
-  top:26%;
+  top:25%;
   left:50%;
   transform: translate(-50%);
   z-index: -2;
@@ -208,8 +208,8 @@ nav{
   text-align: center;
   position: absolute;
   color: rgb(136, 146, 176);
-  font-size: 60px;
-  top:45%;
+  font-size: 30px;
+  top:60%;
   left:50%;
   transform: translate(-50%);
 }
