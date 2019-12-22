@@ -44,20 +44,26 @@ $(document).ready(function() {
 	$('#cmdInput').focus();
   $('#home').addClass('open');
   $('#home').textTyper({
-        speed:7,
+				speed:7,
+				
         afterAnimation:function(){
           $('.command').fadeIn();
           $('#cmdInput').focus();
           $('#cmdInput').val('');
 				}	
+				
 	});
+
 	$('#skipInput').on("keydown", function( event ) {
-		if(event.which == 13){			
+		if(event.which == 13){						
 			$('#skipInput').addClass("animated fadeOut slow");
 			$('.command').addClass("animated fadeOut slow");
 			$('#home').addClass("animated fadeOut slow");
 			$('.welcome').append(name);
 			$('.hello').append(" Stranger"+"!");
+
+			
+
 
 			//New Page
 			$('.background').addClass("behind");
@@ -68,13 +74,23 @@ $(document).ready(function() {
 			//Wait until animation ends to redirect
 			setTimeout(function() {
 				$('.welcome').addClass("animated fadeOut");
+
+				$('#home').addClass('close');
+				$('#skipInput').addClass('close');
+				
+				
 			}, 1750);		
+
 			setTimeout(function() {
 				$('#navWrapper').fadeIn();
 				$("#navWrapper").addClass("animated fadeInUp slow delay-1s");
-				$('#body').fadeIn();
-			
-			}, 2500);		
+				$('#body').fadeIn();			
+			}, 2500);	
+			setTimeout(function() {
+				$('.command').addClass('close');
+				$('#cmdInput').addClass('close');
+			}, 2500);	
+
 		}});
 	
 	//Command input
@@ -101,13 +117,38 @@ $(document).ready(function() {
 				$('#navWrapper').fadeIn();
 				$("#navWrapper").addClass("animated fadeInUp slow delay-1s");
 				$('#body').fadeIn();
-			
+
+				$('#home').addClass('close');
+				$('#skipInput').addClass('close');
+				$('.command').addClass('close');
+				$('#cmdInput').addClass('close');
 			}, 2500);		
+		
 		
 		}	
 	
 	});
 });
+
+jQuery(document).ready(function()
+{
+	var hamburger= jQuery('.hamburger');
+	var navHam = jQuery('#navHam');
+
+	/*Hamburger Menu*/
+	hamburger.click(function()
+	{
+		if(jQuery(this).hasClass('is-active'))
+		{
+			jQuery(this).removeClass('is-active');
+			navHam.removeClass('active');
+		}
+		else{
+			jQuery(this).addClass('is-active');
+			navHam.addClass('active');
+		}
+	})
+})
 
 
 

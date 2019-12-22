@@ -14,11 +14,26 @@ body {
   padding: 1em;
   margin: 0% 0;
   font-size: 1rem;
-  z-index: -3;
   
 }
+#experience{
+  position: absolute;
+  top:25%;
+  left:25%;
+  right: 25%;
+ 
+}
+.xpList{
+  list-style-type: square;
+  font-weight: 200; 
+  height: 35rem;
+ 
+}
+.inList li{
+  color: rgb(136, 146, 176);
+}
 p{
-  font-size: .85em;
+  font-size: 1em;
   margin-bottom:1em;
 }
 @media only screen and (max-width: 420px)
@@ -47,110 +62,6 @@ p{
   }
 
 }
-span{
-  margin-bottom: 2em;
-  display: block;
-  color:#999999;
-  line-height:1;
-}
-/*Skip Text*/
-#inputWrapper { 
-  position: absolute; 
-  top:.5%;
-  left:.75%;
-} 
- input[id = "skipInput"]{
-   
-  max-width: 15em;
-  border: none;
-  font-family: inherit;
-  background: #0B132B;
-  color: #999999;
-  padding:0 .5em;
-}
-input[id = "skipInput"]:focus{
-  max-width: 15em;
-  border: none;
-  font-family: inherit;
-  background: #0B132B;
-  color: #999999;
-  padding:0 .5em;
-}
-
-
-/*CMD Line*/
-input[id = "cmdInput"]{
-
-  max-width: 10em;
-  border: none;
-  font-family: inherit;
-  background: #0B132B;
-  color: #999999;
-  padding:0 .5em;
-}
-input[id = "cmdInput"]:focus{
-  background: #0B132B;
-  color: #999999;
-  outline:none;
-}
-.command{
-  font-size: .85em;
-  display: block;
-  max-width: 35em;
-  color: #999999;
-  font-weight: 700;
-  margin: 2em 0;
-}
-/*Welcome Animation*/
-h1{
-  font-weight: 100;
-  line-height: 1;
-  letter-spacing: -0.5;
-
-}
-.welcome{
-  color:#64ffda;
-  font: inherit;
-  font-size: 1.2em;
-  color:#64ffda;
-  position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  z-index: -2;
-}
-
-
-section{
-  display: none;
-}
-.open{
-  display: block;
-}
-.close{
-  display:none;
-}
-
-
-
-.background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: #0B132B;
-  z-index: -1;
-}
-.infront
-{
-  z-index: 3;
-}
-.behind
-{
-  z-index: -6
-}
-
 
 /* Navbar */
 #navWrapper 
@@ -237,7 +148,7 @@ nav{
 .intro{
   text-align: center;
   color: rgb(230, 241, 255);
-  font-size: 3em;
+  font-size: 2em;
   margin: .5em;
 }
 .intro2
@@ -255,11 +166,6 @@ nav{
     position: absolute;
     z-index: -3;
     left:0%;
-  }
-  .hello{
-    color: rgb(100, 255, 218);
-    font-size: 1.75em;
-    margin:.06em;
   }
   .intro{
     text-align: center;
@@ -279,11 +185,7 @@ nav{
 }
 @media only screen and (max-width: 890px)
 {
-  .hello{
-    color: rgb(100, 255, 218);
-    font-size: 1.75em;
-    margin:.06em;
-  }
+
   .intro{
     text-align: center;
     color: rgb(230, 241, 255);
@@ -437,7 +339,5 @@ nav{
 }
 
 }
-
-
 
 
