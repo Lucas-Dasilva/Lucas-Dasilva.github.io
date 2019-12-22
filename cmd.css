@@ -356,85 +356,85 @@ nav{
     transition-duration: .15s;
     transition-property: transform;
     border-radius: 4px;
-}
-.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
-  background-color: #64ffda;
-}
+  }
+  .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+    background-color: #64ffda;
+  }
   /*Mobile Nav Bar*/
-#navHam
-{
-  position: absolute;
-  padding-top: 1em;
-  padding-left: .5em;
-  padding-right: .5em;
-  margin-top: 1em;
-  display:block;
-  right: 0;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 20;
-  
-}
-#navHam ul{
-  display: block;
-  list-style-type: none;
-  padding: 0;
-}
-#navHam a{
-  font-size: .85em;
-}
-#navHam.active{
-  opacity: 1;
-  visibility:visible;
-  -webkit-transition: opacity 0.8s;
-  transition: opacity 0.8s;
-  background-color: #0A192F;
+  #navHam
+  {
+    position: absolute;
+    padding-top: 1em;
+    padding-left: .5em;
+    padding-right: .5em;
+    margin-top: 1em;
+    display:block;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 20;
+    
+  }
+  #navHam ul{
+    display: block;
+    list-style-type: none;
+    padding: 0;
+  }
+  #navHam a{
+    font-size: .85em;
+  }
+  #navHam.active{
+    opacity: 1;
+    visibility:visible;
+    -webkit-transition: opacity 0.8s;
+    transition: opacity 0.8s;
+    background-color: #0A192F;
 
-}
-.hamLinks a{
-  color: #64ffda;
-  text-decoration: none;
-}
-.hamList{
-  align-content: center;
-  list-style: none;
-  background-color: transparent;
-  line-height: 3;
-  cursor: pointer;
-  margin: 0;
-  font-size: 1em;
-  opacity: 80%;
-  padding: 0;
-}
-.hamList:hover{
-  opacity: 100%;
-}
+  }
+  .hamLinks a{
+    color: #64ffda;
+    text-decoration: none;
+  }
+  .hamList{
+    align-content: center;
+    list-style: none;
+    background-color: transparent;
+    line-height: 3;
+    cursor: pointer;
+    margin: 0;
+    font-size: 1em;
+    opacity: 80%;
+    padding: 0;
+  }
+  .hamList:hover{
+    opacity: 100%;
+  }
 
-#body{
-  position: absolute;
-  z-index: -2;
-  top:30%;
-}
+  #body{
+    position: absolute;
+    z-index: -2;
+    top:30%;
+  }
 
-.hello{
-  color: rgb(100, 255, 218);
-  font-size: 1.2em;
-  margin:.06em;
-}
-.intro{
-  text-align: center;
-  color: rgb(230, 241, 255);
-  font-size: 1.2em;
-  margin: .25em;
-}
-.intro2
-{
-  text-align: center;
-  color: rgb(136, 146, 176);
-  font-size: 1.2em;
-  margin: .5em;
-  
-}
+  .hello{
+    color: rgb(100, 255, 218);
+    font-size: 1.2em;
+    margin:.06em;
+  }
+  .intro{
+    text-align: center;
+    color: rgb(230, 241, 255);
+    font-size: 1.2em;
+    margin: .25em;
+  }
+  .intro2
+  {
+    text-align: center;
+    color: rgb(136, 146, 176);
+    font-size: 1.2em;
+    margin: .5em;
+    
+  }
 
 }
 
