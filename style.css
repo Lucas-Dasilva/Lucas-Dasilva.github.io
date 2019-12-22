@@ -16,20 +16,64 @@ body {
   font-size: 1rem;
   
 }
+.top1::after{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 33em;
+  background-color: rgb(45, 57, 82);
+  position: relative;
+  top: -.6em;
+  margin-left: 3.5em;
+}
+.top2::after{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 28em;
+  background-color: rgb(45, 57, 82);
+  position: relative;
+  top: -.6em;
+  margin-left: 6.5em;
+}
+#about {
+  text-align: left;
+  position: absolute;
+  top:25%;
+  left:25%;
+  right: 25%;
+  
+}
+#about .intro{
+  text-align: left;
+  margin-left: 2em;
+  font-size: 1.5em;
+}
 #experience{
   position: absolute;
   top:25%;
   left:25%;
   right: 25%;
- 
 }
-.xpList{
-  list-style-type: square;
-  font-weight: 200; 
-  height: 35rem;
- 
+.introExp{
+  
+  text-align: left;
+  color: rgb(230, 241, 255);
+  font-size: 1.2em;
+  margin: .25em;
+  margin-left: 2em;
 }
-.inList li{
+.xpList1{
+  margin-left: 3em;
+  list-style-type: disc;
+  font-weight: 200;  
+}
+.xpList2{
+  margin-left: 3em;
+  list-style-type: disc;
+  font-weight: 200;  
+}
+.inList a{
   color: rgb(136, 146, 176);
 }
 p{
