@@ -314,6 +314,11 @@ nav{
 
 @media only screen and (max-width: 625px)
 {
+  .welcome{
+    text-align: center;
+    width: 5em;
+    font-size: 1em;
+  }
   body{
     height: 0;
   }
