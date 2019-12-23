@@ -39,6 +39,8 @@ $(document).ready(function() {
 	$('.welcome').hide();
 	$('#navWrapper').hide();
 	$('#body').hide();
+	$('#svgLogos').hide();
+	
 
 	$('#skipInput').focus();
 	$('#cmdInput').focus();
@@ -77,14 +79,14 @@ $(document).ready(function() {
 
 				$('#home').addClass('close');
 				$('#skipInput').addClass('close');
-				
-				
 			}, 1750);		
 
 			setTimeout(function() {
 				$('#navWrapper').fadeIn();
-				$("#navWrapper").addClass("animated fadeInUp slow delay-1s");
-				$('#body').fadeIn();			
+				$("#navWrapper").addClass("animated fadeInDown slow delay-1s");
+				$('#body').fadeIn();
+				$('#svgLogos').fadeIn();
+				$('#svgLogos').addClass("animated fadeInUp slow delay-1s");			
 			}, 2500);	
 			setTimeout(function() {
 				$('.command').addClass('close');
@@ -115,8 +117,10 @@ $(document).ready(function() {
 			}, 1750);		
 			setTimeout(function() {
 				$('#navWrapper').fadeIn();
-				$("#navWrapper").addClass("animated fadeInUp slow delay-1s");
+				$("#navWrapper").addClass("animated fadeInDown slow delay-1s");
 				$('#body').fadeIn();
+				$('#svgLogos').fadeIn();
+				$('#svgLogos').addClass("animated fadeInUp slow delay-1s");
 
 				$('#home').addClass('close');
 				$('#skipInput').addClass('close');

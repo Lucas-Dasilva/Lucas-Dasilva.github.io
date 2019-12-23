@@ -184,6 +184,10 @@ nav{
   color: rgb(204, 214, 246);
   text-decoration: none;
   letter-spacing: 3px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .7em;
+  padding-bottom: 1em;
 }
 .nonLogo{
   align-content: center;
@@ -191,13 +195,11 @@ nav{
   background-color: transparent;
   line-height: 1.5;
   cursor: pointer;
-  margin-left: 0px;
   font-size: 15px;
   border-width: 1px;
   border-style: solid;
   border-color: rgb(100, 255, 218);
   border-radius: 3px;
-  padding: 0.75rem 1rem;
   opacity: 80%;
 }
 .nonLogo:hover{
@@ -247,6 +249,43 @@ nav{
   font-size: 2em;
   margin: 1em;
  
+}
+#svgLogos{
+  position: absolute;
+  bottom:5%;
+  width: 90%;
+  left:5.75%;
+  text-align: center;
+}
+a {
+  color: #8892B0;
+  fill: #8892B0;
+}
+
+a:hover {
+  color: #64ffda;
+}
+
+a:hover svg {
+  fill:#64ffda;
+}
+a{
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+.fillLogo:hover, .fillLogo:focus {
+  transform: translateY(-3px);
+}
+.fillLogo::after{
+  content: "";
+  display: block;
+  margin-left: 1em;
+  height: 2em;
+  width: 1px;
+  background-color: rgb(45, 57, 82);
+  position: relative;
+  top: 1em;
 }
 @media only screen and (max-width: 1200px)
 {
@@ -314,6 +353,16 @@ nav{
 
 @media only screen and (max-width: 625px)
 {
+  #svgLogos{
+    left:1%;
+    width: 95%;
+    letter-spacing: 11em;
+
+  }
+  .fillLogo::after{
+    top:.3em;
+    margin-right: 1em;
+  }
   .welcome{
     text-align: center;
     width: 5em;
@@ -365,6 +414,7 @@ nav{
   .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
     background-color: #64ffda;
   }
+
   /*Mobile Nav Bar*/
   #navHam
   {
@@ -386,7 +436,7 @@ nav{
     padding: 0;
   }
   #navHam a{
-    font-size: .85em;
+    font-size: .7em;
   }
   #navHam.active{
     opacity: 1;
